@@ -48,7 +48,73 @@ https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu
 
 ---
 
-# 二、为什么不能直接卖“Mechanical Permit”
+# 二、竞争验证：这个市场已经有人在做
+
+2026 年 9–10 月的公开产品显示，Chicago permit → HVAC sales intelligence 已经形成真实产品形态。
+
+### Builtie
+
+其 2026-09-23 的公开数据称：
+
+- Chicago 有 1,183 个处于 HVAC award window 的项目
+- 其中 692 个是过去 90 天获批
+- 这些项目的 median declared construction value 约 $850,000
+- 其模型试图判断 HVAC 在项目施工周期中的采购窗口
+
+这说明：
+
+**“Permit → 项目阶段 → HVAC 采购机会”本身已经有人商业化。**
+
+### EarlyIntent
+
+其近期公开页面显示：
+
+- Chicago 最近 90 天约 6,629 个 permit
+- 其中 762 个被识别为与 HVAC/电气化相关
+- 约 59 个/周
+- 它明确强调这些只是原始池，进一步评分后才进入销售 feed
+
+它的公开产品逻辑与我们设想的非常接近：
+
+**公开 permit → trade-specific signal → scoring → sales feed**
+
+### Kova Signals
+
+其 2026 年公开数据也显示 Chicago HVAC permit 的数量级稳定存在：
+
+- 2026-06：42 个
+- 2026-08：48 个
+- 某些周约 11–16 个
+
+注意：这些统计是按工作描述直接命中 HVAC/furnace/air conditioning 的 permit，不等于“可销售 Lead”。
+
+---
+
+# 三、这个新证据改变了什么
+
+改变非常大。
+
+我们之前假设：
+
+> 每月约 20–40 条高置信机会。
+
+现在看，这个目标**不是明显过高**，但也不能直接当成收入预测。
+
+更重要的是：
+
+市场上已经有人在做：
+
+> **Permit → Opportunity**
+
+因此我们不应该再验证“有没有商业需求”。
+
+我们真正需要验证：
+
+> **能不能做出一个比现有产品更窄、更便宜、更容易复制的版本。**
+
+---
+
+# 四、为什么不能直接卖“Mechanical Permit”
 
 如果某条记录本身就是 HVAC / Mechanical permit：
 
@@ -76,7 +142,43 @@ https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu
 
 ---
 
-# 三、MVP 数据漏斗
+# 五、真正的机会可能不是“发现 HVAC permit”
+
+这是目前最值得深入的一点。
+
+公开市场中的产品已经证明：
+
+**直接搜索 HVAC 关键词只是第一层。**
+
+更有价值的信号可能是：
+
+- 新租户进入商业空间
+- 大型 tenant improvement
+- 商业空间改造
+- 新建筑
+- 面积增加
+- 用途改变
+- 电力升级但尚无 HVAC 记录
+- 餐厅新店装修
+- 厂房/仓库改造
+
+这些事件本身未必写着“H​VAC”。
+
+但它们可能意味着：
+
+> **HVAC 需求即将发生。**
+
+因此 AI 的价值不是“帮我们搜索 HVAC”。
+
+而是：
+
+**从非 HVAC 事件推断 HVAC 需求。**
+
+这才是 Signal 的核心。
+
+---
+
+# 六、MVP 数据漏斗
 
 采用一个保守的假设模型。
 
@@ -142,7 +244,7 @@ https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu
 
 ---
 
-# 四、Lead 价格应该怎么估
+# 七、Lead 价格应该怎么估
 
 不能直接拿普通家庭服务 Lead 的价格硬套。
 
@@ -162,7 +264,7 @@ https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu
 
 ---
 
-# 五、月收入敏感性
+# 八、月收入敏感性
 
 假设每月真正出售：
 
@@ -194,7 +296,7 @@ https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu
 
 ---
 
-# 六、成本结构
+# 九、成本结构
 
 这个模型最大的优点是：
 
@@ -225,7 +327,7 @@ MVP 阶段甚至可以：
 
 ---
 
-# 七、真正的关键指标
+# 十、真正的关键指标
 
 以后不再主要看：
 
@@ -265,7 +367,7 @@ MVP 阶段甚至可以：
 
 ---
 
-# 八、最危险的地方
+# 十一、最危险的地方
 
 ## 1. 事件不等于需求
 
@@ -309,7 +411,7 @@ MVP 阶段甚至可以：
 
 ---
 
-# 九、MVP 的最小实验
+# 十二、MVP 的最小实验
 
 不要一开始覆盖美国。
 
@@ -336,7 +438,7 @@ MVP 阶段甚至可以：
 
 ---
 
-# 十、第一阶段不需要收费
+# 十三、第一阶段不需要收费
 
 甚至可以先做：
 
@@ -356,13 +458,19 @@ $50 → $100 → $200
 
 ---
 
-# 十一、当前结论
+# 十四、当前结论
 
 ## 数据获取
 
 **通过**
 
-公开、稳定、每日更新。
+公开、稳定、每日更新。citeturn0search0turn0search6
+
+## 市场存在
+
+**通过**
+
+已有产品把 Chicago permits 转化成 HVAC/construction sales intelligence。citeturn0search1turn0search3turn0search9
 
 ## 技术可行性
 
@@ -390,11 +498,11 @@ Lead 市场已经证明专业服务商愿意购买客户机会。
 
 而是：
 
-> **“AI 从公开事件中推断出的 Signal Lead，是否比普通 Lead 更值得付钱？”**
+> **“我们推断出来的 Signal Lead，是否比普通公开 Lead 更值得付钱？”**
 
 ---
 
-# 十二、下一道生死关
+# 十五、下一道生死关
 
 下一阶段只验证三个数字：
 
